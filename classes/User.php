@@ -1,5 +1,9 @@
 <?php
 
+namespace Phpunit;
+
+use InvalidArgumentException;
+
 class User
 {
     public int $age;
@@ -18,6 +22,7 @@ class User
 
     public function tellName(): string
     {
+        
         return "Mening ismim " . $this->name . ".";
     }
 

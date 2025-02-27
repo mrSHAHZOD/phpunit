@@ -1,8 +1,10 @@
 <?php
 
+use Phpunit\Box;
+use Phpunit\User;
+
+require 'vendor/autoload.php';
 require 'functions.php';
-require 'classes/Box.php';
-require 'classes/User.php';
 
 
 echo addNumbers(5,5);

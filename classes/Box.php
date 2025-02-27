@@ -1,5 +1,6 @@
 <?php
 
+namespace Phpunit;
 class Box
 {
     protected mixed $items = [];
