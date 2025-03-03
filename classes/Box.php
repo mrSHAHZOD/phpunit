@@ -3,7 +3,7 @@
 namespace Phpunit;
 class Box
 {
-    protected mixed $items = [];
+    public mixed $items = [];
 
 
     public function __construct($items = [])
@@ -29,5 +29,23 @@ class Box
         return array_filter($this->items, function ($item) use ($letter) {
             return stripos($item, $letter) === 0;
         });
+    }
+
+    public function addItem($item): bool
+    {
+        
+
+        $this->items[] = $item;
+
+        return true;
+    }
+
+    public function removeItem($item)
+    {
+  
+        $index = array_search($item, $this->items);
+        unset($this->items[$index]);
+
+        return true;
     }
 }
